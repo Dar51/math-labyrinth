@@ -1,1 +1,1 @@
-# math-labyrinth
+# math-labyrint
