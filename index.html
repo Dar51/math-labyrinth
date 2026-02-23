@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Labyrinth Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Math Labyrinth Puzzle</h1>
+        <div class="game-info">
+            <div class="info-item">
+                <span>Level: </span>
+                <span id="level">1</span>
+            </div>
+            <div class="info-item">
+                <span>Problems Solved: </span>
+                <span id="solved">0</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div id="mathModal" class="modal">
+            <div class="modal-content">
+                <h2>Solve the Problem!</h2>
+                <p id="problemText"></p>
+                <input type="text" id="answerInput" placeholder="Enter your answer">
+                <div class="modal-buttons">
+                    <button id="submitAnswer">Submit</button>
+                    <button id="skipProblem" class="skip-btn">Skip (Penalty)</button>
+                </div>
+                <p id="feedback"></p>
+            </div>
+        </div>
+        <div class="controls">
+            <p>Use Arrow Keys or WASD to move</p>
+            <button id="newGame" onclick="if(typeof newGame === 'function') { newGame(); } else { console.error('newGame function not found'); }">New Game</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
